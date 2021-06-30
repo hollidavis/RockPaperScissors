@@ -12,7 +12,7 @@ to look at examples of the `card` component in the bootstrap documentation.
 The interface should be simple and must contain at least 3 buttons: Rock, Paper, and Scissors.
 
 When a button is pressed, the game should execute a function written in javascript.
-Us the `onclick` attribute to execute the function. The rock button might look like this.
+Use the `onclick` attribute to execute the function. The rock button might look like this.
 ```html
 <button onclick="play('rock')">Rock</button>
 ```
