@@ -14,9 +14,46 @@
 </head>
 
 <body>
-  <header></header>
-  <main></main>
-  <footer></footer>
+  <header class="bg-primary text-light text-center p-3">
+    <h1>Ready to Play?</h1>
+  </header>
+  <main class="container">
+    <div class="row text-center">
+      <div class="col-12 p-4" id="buttons">
+        <button class="btn btn-success btn-lg m-3" onclick="play('rock')">Boulder</button>
+        <button class="btn btn-info btn-lg m-3" onclick="play('paper')">Parchment</button>
+        <button class="btn btn-warning btn-lg m-3" onclick="play('scissors')">Shears</button>
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <div class="card border-primary mb-3">
+            <div class="card-header font-size-large">Your Choice</div>
+            <div class="card-body">
+              <div class="text-center" id="animal-pic">
+                <img src="http://placekitten.com/300/300" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 d-flex justify-content-center align-items-center">
+          <h1>VS.</h1>
+        </div>
+        <div class="col-5">
+          <div class="card border-primary mb-3">
+            <div class="card-header">Opponent's Choice</div>
+            <div class="card-body">
+              <div class="text-center" id="animal-pic">
+                <img src="http://placekitten.com/300/300" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-primary text-light text-center p-3">
+    <h1>🤘📜✂</h1>
+  </footer>
   <script src="app.js"></script>
 </body>
 

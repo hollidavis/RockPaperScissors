@@ -7,3 +7,7 @@ body {
 main {
   flex-grow: 1;
 }
+
+.card-header{
+  font-size: 18pt;
+}
