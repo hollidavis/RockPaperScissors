@@ -15,10 +15,9 @@ let options = {
 
 function play(playerChoice) {
   let choice = options[playerChoice]
-  let compChoice = 'rock'
-  // compChoice will eventually equal a function that chooses randomly?
+  let compChoice = random()
 
-  if (compChoice == choice) {
+  if (compChoice == playerChoice) {
     document.getElementById('result').innerHTML = '<div class="alert alert-info text-center font-size"> You have tied! </div>'
   } else if (compChoice == choice.beats) {
     document.getElementById('result').innerHTML = '<div class="alert alert-success text-center font-size"> You have won! </div>'
@@ -28,8 +27,16 @@ function play(playerChoice) {
 
   document.getElementById('choice-output').innerText = `${playerChoice}`.toUpperCase()
   document.getElementById('choice-pic').innerHTML = `<img class="w-100" src="${choice.img}" alt="${playerChoice}">`
+
+  document.getElementById('compChoice-output').innerText = `${compChoice}`.toUpperCase()
+  document.getElementById('compChoice-pic').innerHTML = `<img class="w-100" src="${options[compChoice].img}" alt="${compChoice}">`
 }
 
+function random() {
+  let choices = Object.keys(options)
+  let randIndex = Math.floor(Math.random() * (choices.length))
+  return choices[randIndex]
+}
 //Initial Attempt to Solve
 // if (choice.value == 1) {
 //   console.log('you tied!')
